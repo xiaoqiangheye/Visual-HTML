@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Constant.ScreenX = window?.screen.bounds.maxX
+        Constant.ScreenY = window?.screen.bounds.maxY
+        do{
+            try! FileManager.default.createDirectory(atPath: Constant.MY_DIRECTORY, withIntermediateDirectories: true, attributes: nil)
+            print("Success")
+        }
+        catch let error as Error{
+            print(error)
+        }
         return true
     }
 
