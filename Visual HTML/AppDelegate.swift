@@ -21,11 +21,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Constant.ScreenY = window?.screen.bounds.maxY
         do{
             try! FileManager.default.createDirectory(atPath: Constant.MY_DIRECTORY, withIntermediateDirectories: true, attributes: nil)
+            try! FileManager.default.createDirectory(atPath: NSHomeDirectory() + "/Documents/FTP/", withIntermediateDirectories: true, attributes: nil)
             print("Success")
         }
         catch let error as Error{
             print(error)
         }
+        
+        if !UserDefaults.standard.bool(forKey: Constant.IF_LAUCHED_STRING){
+            UserDefaults.standard.set(true, forKey: Constant.IF_LAUCHED_STRING)
+            var url = Constant.FTP.FTP_STORAGE_URL
+            var array:Array<FTPManager> = []
+            let dataWrite = try? JSONEncoder().encode(array)
+            do {
+                try? dataWrite?.write(to: URL(fileURLWithPath:Constant.FTP.FTP_STORAGE_URL))
+            } catch {
+                print("保存到本地文件失败")
+               
+            }
+            
+        }else{
+            if let dataRead = try? Data(contentsOf: URL(fileURLWithPath:Constant.FTP.FTP_STORAGE_URL)) {
+                let newArray = try? JSONDecoder().decode([FTPManager].self, from: dataRead)
+            } else {
+                var url = Constant.FTP.FTP_STORAGE_URL
+                url.append("ftpList.txt")
+                var array:Array<FTPManager> = []
+                let dataWrite = try? JSONEncoder().encode(array)
+                do {
+                    try dataWrite?.write(to: URL(fileURLWithPath:Constant.FTP.FTP_STORAGE_URL))
+                } catch {
+                    print("保存到本地文件失败")
+                    
+                }
+            }
+        }
+        
+        if launchOptions != nil{
+            var vc = DocumentShareController()
+            var nav = UINavigationController(rootViewController: vc)
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+            
+            vc.path = launchOptions![UIApplicationLaunchOptionsKey.url] as! URL
+            vc.preview()
+        }
+        
+        
         return true
     }
 
@@ -97,6 +139,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        var vc = DocumentShareController()
+        
+       // var nav = UINavigationController(rootViewController: vc)
+        
+        vc.view.frame.size.width = 200
+        vc.view.frame.size.height = 500
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        self.window?.backgroundColor = UIColor.white
+        vc.path = url
+        print(url.description)
+         //  vc.preview()
+       
+    
+        return true;
+    }
+    
+  
 
 }
 

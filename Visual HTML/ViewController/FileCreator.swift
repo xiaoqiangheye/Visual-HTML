@@ -12,11 +12,15 @@ import UIKit
 class FileCreator:UIViewController{
     @IBOutlet var text:UITextField!
     @IBOutlet var jsButton:UIButton!
-      @IBOutlet var htmlButton:UIButton!
-      @IBOutlet var cssButton:UIButton!
-      @IBOutlet var phpButton:UIButton!
+    @IBOutlet var htmlButton:UIButton!
+    @IBOutlet var cssButton:UIButton!
+    @IBOutlet var phpButton:UIButton!
+    @IBOutlet var folderButton: UIButton!
+    @IBOutlet var createButton: UIButton!
+    @IBOutlet var importPictureButton: UIButton!
+    @IBOutlet var exitButton: UIButton!
     var option:String = "html"
-    
+    var currentURL:String = ProjectUrl
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,9 +33,16 @@ class FileCreator:UIViewController{
         htmlButton.layer.cornerRadius = 10
         cssButton.layer.cornerRadius = 10
         phpButton.layer.cornerRadius = 10
+        folderButton.layer.cornerRadius = 10
         htmlButton.backgroundColor = UIColor.blue
         htmlButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        restore()
+        createButton.layer.cornerRadius = 10
+        importPictureButton.layer.cornerRadius = 10
+        createButton.frame.origin.x = self.view.frame.width/4
+        createButton.frame.origin.y = self.view.frame.height - 100
+        importPictureButton.frame.origin.x = self.view.frame.width/2*3
+        importPictureButton.frame.origin.y = self.view.frame.height - 100
+       // restore()
     }
     
     @IBAction func buttonChoiced(_ sender:UIButton){
@@ -57,6 +68,11 @@ class FileCreator:UIViewController{
         phpButton.backgroundColor = UIColor.blue
         phpButton.setTitleColor(UIColor.white, for: UIControlState())
              option = sender.title(for: UIControlState())!
+        case "Folder"?:
+            restore()
+        folderButton.backgroundColor = UIColor.blue
+        folderButton.setTitleColor(UIColor.white, for: UIControlState())
+            option = "folder"
         case "Create"?:
             create()
         case .none:
@@ -67,12 +83,35 @@ class FileCreator:UIViewController{
     }
     
     func create(){
+        if option != "folder"{
         let file:URL = URL(fileURLWithPath: ProjectUrl).appendingPathComponent(text.text! + "." + option)
-        print(file)
+        print(file.path)
         let exist = FileManager.default.fileExists(atPath: file.path)
         if !exist{
             let createSuccess = FileManager.default.createFile(atPath: file.path, contents: nil, attributes: nil)
             print("If Success\(createSuccess)")
+           
+           
+            if createSuccess == true{
+                let parentController = (self.parent as! ViewController).projectController
+                parentController?.clearViews()
+                parentController?.cumulatedHeight = 0
+                print("projectName:\(ProjectName)")
+                let view = FileView(name: ProjectName, frame: CGRect(x:0,y: (parentController?.cumulatedHeight)!,width:Int((parentController?.view.frame.width)!),height:30), Stanza: 0, Type: "project",url:ProjectUrl)
+                view.parentController = parentController
+                parentController?.cumulatedHeight += 30
+                view.center.x =  (parentController?.stackView.frame.width)!/2
+                parentController?.scrollView.addSubview(view)
+                
+                var parentNode:Node = Node(name: ProjectName, storage: nil)
+                parentController?.dealNode(path: URL(fileURLWithPath:ProjectUrl).path, paths: try! FileManager.default.contentsOfDirectory(atPath: URL(fileURLWithPath:ProjectUrl).path), node: parentNode)
+                  parentController?.load(node:parentNode,stanza:1)
+               
+            }
+        }
+        }else if (option == "folder")
+        {
+            try! FileManager.default.createDirectory(atPath: currentURL + text.text!, withIntermediateDirectories: true, attributes: nil)
         }
     }
     
@@ -89,6 +128,9 @@ class FileCreator:UIViewController{
         phpButton.backgroundColor = UIColor.white
         phpButton.setTitleColor(UIColor.blue, for: UIControlState())
         phpButton.layer.borderWidth = 2
+        folderButton.layer.borderWidth = 2
+        folderButton.setTitleColor(UIColor.blue, for: UIControlState())
+        folderButton.backgroundColor = UIColor.white
     }
     
 }

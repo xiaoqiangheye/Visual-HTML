@@ -12,6 +12,8 @@
 		B60566BF202465EE009C8485 /* ProjectCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60566BE202465EE009C8485 /* ProjectCellView.swift */; };
 		B60566C32024829E009C8485 /* ProjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60566C22024829E009C8485 /* ProjectCreator.swift */; };
 		B60566C52024AD12009C8485 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60566C42024AD12009C8485 /* Global.swift */; };
+		B61F027F2030B16300474717 /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F027E2030B16300474717 /* TextBlock.swift */; };
+		B61F02812031B5F300474717 /* BlockViewWithNoEndTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F02802031B5F300474717 /* BlockViewWithNoEndTag.swift */; };
 		B624455E2025646000E82D35 /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624455D2025646000E82D35 /* FileView.swift */; };
 		B6244560202564A600E82D35 /* StackFileViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624455F202564A600E82D35 /* StackFileViewer.swift */; };
 		B6244562202577FB00E82D35 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6244561202577FB00E82D35 /* Node.swift */; };
@@ -22,6 +24,8 @@
 		B63486BE20298F210021D1E0 /* VisualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63486BD20298F210021D1E0 /* VisualController.swift */; };
 		B63486C0202A050B0021D1E0 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63486BF202A050B0021D1E0 /* PropertiesController.swift */; };
 		B63486C2202A0F060021D1E0 /* PropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63486C1202A0F060021D1E0 /* PropertiesView.swift */; };
+		B63486C4202AD2590021D1E0 /* HtmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63486C3202AD2590021D1E0 /* HtmlParser.swift */; };
+		B64A5D24205A463300AEA88D /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A5D23205A463300AEA88D /* AlertView.swift */; };
 		B667E26A2024359B00836917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B667E2692024359B00836917 /* AppDelegate.swift */; };
 		B667E26C2024359B00836917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B667E26B2024359B00836917 /* ViewController.swift */; };
 		B667E2722024359B00836917 /* Visual_HTML.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B667E2702024359B00836917 /* Visual_HTML.xcdatamodeld */; };
@@ -32,6 +36,52 @@
 		B667E29B2024383D00836917 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B667E29A2024383D00836917 /* WebView.swift */; };
 		B667E29D202440DB00836917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B667E29C202440DB00836917 /* Main.storyboard */; };
 		B667E29F2024426A00836917 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B667E29E2024426A00836917 /* Editor.swift */; };
+		B68F961C205E2C2600197CE9 /* RPLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F961B205E2C2600197CE9 /* RPLoadingAnimationView.swift */; };
+		B68F9623205E2C7F00197CE9 /* LineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F961D205E2C7E00197CE9 /* LineScale.swift */; };
+		B68F9624205E2C7F00197CE9 /* FunnyDotsA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F961E205E2C7E00197CE9 /* FunnyDotsA.swift */; };
+		B68F9625205E2C7F00197CE9 /* RotatingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F961F205E2C7E00197CE9 /* RotatingCircle.swift */; };
+		B68F9626205E2C7F00197CE9 /* DotSpinningLikeSkype.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F9620205E2C7E00197CE9 /* DotSpinningLikeSkype.swift */; };
+		B68F9627205E2C7F00197CE9 /* SpininngDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F9621205E2C7E00197CE9 /* SpininngDot.swift */; };
+		B68F9628205E2C7F00197CE9 /* DotTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F9622205E2C7F00197CE9 /* DotTrianglePath.swift */; };
+		B68F962A205E2CB000197CE9 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F9629205E2CB000197CE9 /* RPLoadingAnimationDelegate.swift */; };
+		B68F967A205E2EAF00197CE9 /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68F9679205E2EAF00197CE9 /* TimingFunction.swift */; };
+		B6A9387C204FCA0A00C491D9 /* JSFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A9387B204FCA0A00C491D9 /* JSFunction.swift */; };
+		B6A9387F20510EE200C491D9 /* AddBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A9387E20510EE200C491D9 /* AddBlockView.swift */; };
+		B6B0A765204D201100CB26B9 /* DirectoryCreationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A75B204D201100CB26B9 /* DirectoryCreationOperation.swift */; };
+		B6B0A766204D201100CB26B9 /* FileDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A75C204D201100CB26B9 /* FileDownloadOperation.swift */; };
+		B6B0A767204D201100CB26B9 /* FileUploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A75D204D201100CB26B9 /* FileUploadOperation.swift */; };
+		B6B0A768204D201100CB26B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6B0A75E204D201100CB26B9 /* Info.plist */; };
+		B6B0A769204D201100CB26B9 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A75F204D201100CB26B9 /* Operation.swift */; };
+		B6B0A76A204D201100CB26B9 /* ReadStreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A760204D201100CB26B9 /* ReadStreamOperation.swift */; };
+		B6B0A76B204D201100CB26B9 /* ResourceListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A761204D201100CB26B9 /* ResourceListOperation.swift */; };
+		B6B0A76C204D201100CB26B9 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A762204D201100CB26B9 /* Session.swift */; };
+		B6B0A76D204D201100CB26B9 /* StreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A763204D201100CB26B9 /* StreamOperation.swift */; };
+		B6B0A76E204D201100CB26B9 /* WriteStreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0A764204D201100CB26B9 /* WriteStreamOperation.swift */; };
+		B6B0A771204D221900CB26B9 /* RebekkaTouch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6B0A74C204D1FB900CB26B9 /* RebekkaTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6BDDD62203470C80008463A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6BDDD39203470C70008463A /* Info.plist */; };
+		B6BDDD63203470C80008463A /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD3D203470C70008463A /* aes_ni.c */; };
+		B6BDDD64203470C80008463A /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD3F203470C70008463A /* aescrypt.c */; };
+		B6BDDD65203470C80008463A /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD40203470C70008463A /* aeskey.c */; };
+		B6BDDD66203470C80008463A /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD42203470C70008463A /* aestab.c */; };
+		B6BDDD67203470C80008463A /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD46203470C70008463A /* fileenc.c */; };
+		B6BDDD68203470C80008463A /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD48203470C70008463A /* hmac.c */; };
+		B6BDDD69203470C80008463A /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD4A203470C70008463A /* prng.c */; };
+		B6BDDD6A203470C80008463A /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD4C203470C70008463A /* pwd2key.c */; };
+		B6BDDD6B203470C80008463A /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD4E203470C70008463A /* sha1.c */; };
+		B6BDDD6C203470C80008463A /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD50203470C70008463A /* crypt.c */; };
+		B6BDDD6D203470C80008463A /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD52203470C70008463A /* ioapi.c */; };
+		B6BDDD6E203470C80008463A /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD54203470C70008463A /* ioapi_buf.c */; };
+		B6BDDD6F203470C80008463A /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD56203470C70008463A /* ioapi_mem.c */; };
+		B6BDDD70203470C80008463A /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD58203470C70008463A /* minishared.c */; };
+		B6BDDD71203470C80008463A /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD5A203470C70008463A /* unzip.c */; };
+		B6BDDD72203470C80008463A /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD5C203470C70008463A /* zip.c */; };
+		B6BDDD73203470C80008463A /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD5F203470C70008463A /* SSZipArchive.m */; };
+		B6BDDD77203472140008463A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B6BDDD76203472140008463A /* libz.tbd */; };
+		B6BDDD792034753C0008463A /* FTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDD782034753C0008463A /* FTPManager.swift */; };
+		B6BDDDED203579290008463A /* FTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDDEC203579290008463A /* FTPViewController.swift */; };
+		B6BDDDEF203597860008463A /* FileViewWithFTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDDEE203597860008463A /* FileViewWithFTP.swift */; };
+		B6BDDDF220368E920008463A /* FTPConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDDF120368E920008463A /* FTPConfiguration.swift */; };
+		B6BDDDF620403CED0008463A /* DocumentShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDDDF520403CED0008463A /* DocumentShareController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +99,42 @@
 			remoteGlobalIDString = B667E2652024359B00836917;
 			remoteInfo = "Visual HTML";
 		};
+		B6B0A749204D1FB900CB26B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6B0A744204D1FB900CB26B9 /* Rebekka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 47FFC2831B09279200D3EDFE;
+			remoteInfo = Rebekka;
+		};
+		B6B0A74B204D1FB900CB26B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6B0A744204D1FB900CB26B9 /* Rebekka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 47FFC2DC1B09297E00D3EDFE;
+			remoteInfo = RebekkaTouch;
+		};
+		B6B0A76F204D220900CB26B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6B0A744204D1FB900CB26B9 /* Rebekka.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 47FFC2DB1B09297E00D3EDFE;
+			remoteInfo = RebekkaTouch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6BDDD962034941D0008463A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B6B0A771204D221900CB26B9 /* RebekkaTouch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B60566BA20245414009C8485 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -57,6 +142,8 @@
 		B60566BE202465EE009C8485 /* ProjectCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCellView.swift; sourceTree = "<group>"; };
 		B60566C22024829E009C8485 /* ProjectCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreator.swift; sourceTree = "<group>"; };
 		B60566C42024AD12009C8485 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		B61F027E2030B16300474717 /* TextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBlock.swift; sourceTree = "<group>"; };
+		B61F02802031B5F300474717 /* BlockViewWithNoEndTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewWithNoEndTag.swift; sourceTree = "<group>"; };
 		B624455D2025646000E82D35 /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		B624455F202564A600E82D35 /* StackFileViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackFileViewer.swift; sourceTree = "<group>"; };
 		B6244561202577FB00E82D35 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -67,6 +154,8 @@
 		B63486BD20298F210021D1E0 /* VisualController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualController.swift; sourceTree = "<group>"; };
 		B63486BF202A050B0021D1E0 /* PropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesController.swift; sourceTree = "<group>"; };
 		B63486C1202A0F060021D1E0 /* PropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesView.swift; sourceTree = "<group>"; };
+		B63486C3202AD2590021D1E0 /* HtmlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlParser.swift; sourceTree = "<group>"; };
+		B64A5D23205A463300AEA88D /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		B667E2662024359B00836917 /* Visual HTML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Visual HTML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B667E2692024359B00836917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B667E26B2024359B00836917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +172,74 @@
 		B667E29A2024383D00836917 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B667E29C202440DB00836917 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B667E29E2024426A00836917 /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
+		B68F961B205E2C2600197CE9 /* RPLoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationView.swift; sourceTree = "<group>"; };
+		B68F961D205E2C7E00197CE9 /* LineScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScale.swift; sourceTree = "<group>"; };
+		B68F961E205E2C7E00197CE9 /* FunnyDotsA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyDotsA.swift; sourceTree = "<group>"; };
+		B68F961F205E2C7E00197CE9 /* RotatingCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingCircle.swift; sourceTree = "<group>"; };
+		B68F9620205E2C7E00197CE9 /* DotSpinningLikeSkype.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotSpinningLikeSkype.swift; sourceTree = "<group>"; };
+		B68F9621205E2C7E00197CE9 /* SpininngDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpininngDot.swift; sourceTree = "<group>"; };
+		B68F9622205E2C7F00197CE9 /* DotTrianglePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotTrianglePath.swift; sourceTree = "<group>"; };
+		B68F9629205E2CB000197CE9 /* RPLoadingAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationDelegate.swift; sourceTree = "<group>"; };
+		B68F9679205E2EAF00197CE9 /* TimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
+		B6A9387B204FCA0A00C491D9 /* JSFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSFunction.swift; sourceTree = "<group>"; };
+		B6A9387E20510EE200C491D9 /* AddBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlockView.swift; sourceTree = "<group>"; };
+		B6B0A744204D1FB900CB26B9 /* Rebekka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Rebekka.xcodeproj; sourceTree = "<group>"; };
+		B6B0A75B204D201100CB26B9 /* DirectoryCreationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryCreationOperation.swift; sourceTree = "<group>"; };
+		B6B0A75C204D201100CB26B9 /* FileDownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadOperation.swift; sourceTree = "<group>"; };
+		B6B0A75D204D201100CB26B9 /* FileUploadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUploadOperation.swift; sourceTree = "<group>"; };
+		B6B0A75E204D201100CB26B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6B0A75F204D201100CB26B9 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		B6B0A760204D201100CB26B9 /* ReadStreamOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadStreamOperation.swift; sourceTree = "<group>"; };
+		B6B0A761204D201100CB26B9 /* ResourceListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceListOperation.swift; sourceTree = "<group>"; };
+		B6B0A762204D201100CB26B9 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B6B0A763204D201100CB26B9 /* StreamOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOperation.swift; sourceTree = "<group>"; };
+		B6B0A764204D201100CB26B9 /* WriteStreamOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteStreamOperation.swift; sourceTree = "<group>"; };
+		B6BDDD39203470C70008463A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6BDDD3C203470C70008463A /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		B6BDDD3D203470C70008463A /* aes_ni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes_ni.c; sourceTree = "<group>"; };
+		B6BDDD3E203470C70008463A /* aes_ni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_ni.h; sourceTree = "<group>"; };
+		B6BDDD3F203470C70008463A /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		B6BDDD40203470C70008463A /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		B6BDDD41203470C70008463A /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		B6BDDD42203470C70008463A /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		B6BDDD43203470C70008463A /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		B6BDDD44203470C70008463A /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		B6BDDD45203470C70008463A /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		B6BDDD46203470C70008463A /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		B6BDDD47203470C70008463A /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		B6BDDD48203470C70008463A /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		B6BDDD49203470C70008463A /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		B6BDDD4A203470C70008463A /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		B6BDDD4B203470C70008463A /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		B6BDDD4C203470C70008463A /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		B6BDDD4D203470C70008463A /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		B6BDDD4E203470C70008463A /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		B6BDDD4F203470C70008463A /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		B6BDDD50203470C70008463A /* crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypt.c; sourceTree = "<group>"; };
+		B6BDDD51203470C70008463A /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		B6BDDD52203470C70008463A /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		B6BDDD53203470C70008463A /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		B6BDDD54203470C70008463A /* ioapi_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_buf.c; sourceTree = "<group>"; };
+		B6BDDD55203470C70008463A /* ioapi_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_buf.h; sourceTree = "<group>"; };
+		B6BDDD56203470C70008463A /* ioapi_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_mem.c; sourceTree = "<group>"; };
+		B6BDDD57203470C70008463A /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
+		B6BDDD58203470C70008463A /* minishared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = minishared.c; sourceTree = "<group>"; };
+		B6BDDD59203470C70008463A /* minishared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minishared.h; sourceTree = "<group>"; };
+		B6BDDD5A203470C70008463A /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		B6BDDD5B203470C70008463A /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		B6BDDD5C203470C70008463A /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		B6BDDD5D203470C70008463A /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		B6BDDD5E203470C70008463A /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		B6BDDD5F203470C70008463A /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		B6BDDD60203470C70008463A /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		B6BDDD61203470C70008463A /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		B6BDDD74203471020008463A /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		B6BDDD76203472140008463A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B6BDDD782034753C0008463A /* FTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPManager.swift; sourceTree = "<group>"; };
+		B6BDDDEC203579290008463A /* FTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPViewController.swift; sourceTree = "<group>"; };
+		B6BDDDEE203597860008463A /* FileViewWithFTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewWithFTP.swift; sourceTree = "<group>"; };
+		B6BDDDF120368E920008463A /* FTPConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPConfiguration.swift; sourceTree = "<group>"; };
+		B6BDDDF520403CED0008463A /* DocumentShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentShareController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BDDD77203472140008463A /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +280,9 @@
 				B62445632025F17C00E82D35 /* FileCreator.swift */,
 				B63486BD20298F210021D1E0 /* VisualController.swift */,
 				B63486BF202A050B0021D1E0 /* PropertiesController.swift */,
+				B6BDDDEC203579290008463A /* FTPViewController.swift */,
+				B6BDDDF120368E920008463A /* FTPConfiguration.swift */,
+				B6BDDDF520403CED0008463A /* DocumentShareController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -134,7 +295,14 @@
 				B63486B720284F360021D1E0 /* Reminder.swift */,
 				B63486B9202850A80021D1E0 /* WordsView.swift */,
 				B63486BB20296E8E0021D1E0 /* BlockView.swift */,
+				B61F02802031B5F300474717 /* BlockViewWithNoEndTag.swift */,
+				B61F027E2030B16300474717 /* TextBlock.swift */,
 				B63486C1202A0F060021D1E0 /* PropertiesView.swift */,
+				B6BDDDEE203597860008463A /* FileViewWithFTP.swift */,
+				B6A9387E20510EE200C491D9 /* AddBlockView.swift */,
+				B64A5D23205A463300AEA88D /* AlertView.swift */,
+				B68F961B205E2C2600197CE9 /* RPLoadingAnimationView.swift */,
+				B68F9629205E2CB000197CE9 /* RPLoadingAnimationDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,10 +310,12 @@
 		B667E25D2024359B00836917 = {
 			isa = PBXGroup;
 			children = (
+				B6B0A744204D1FB900CB26B9 /* Rebekka.xcodeproj */,
 				B667E2682024359B00836917 /* Visual HTML */,
 				B667E2802024359B00836917 /* Visual HTMLTests */,
 				B667E28B2024359B00836917 /* Visual HTMLUITests */,
 				B667E2672024359B00836917 /* Products */,
+				B6BDDD75203472130008463A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,11 +332,19 @@
 		B667E2682024359B00836917 /* Visual HTML */ = {
 			isa = PBXGroup;
 			children = (
+				B68F9679205E2EAF00197CE9 /* TimingFunction.swift */,
+				B68F9619205E2BF800197CE9 /* animation */,
+				B6B0A75A204D201100CB26B9 /* Rebekka */,
+				B6BDDD38203470C70008463A /* SSZipArchive */,
 				B60566C120246617009C8485 /* View */,
 				B60566C0202465F6009C8485 /* ViewController */,
+				B63486C3202AD2590021D1E0 /* HtmlParser.swift */,
+				B6BDDD782034753C0008463A /* FTPManager.swift */,
 				B60566BA20245414009C8485 /* Constant.swift */,
 				B60566C42024AD12009C8485 /* Global.swift */,
 				B6244561202577FB00E82D35 /* Node.swift */,
+				B6A9387B204FCA0A00C491D9 /* JSFunction.swift */,
+				B6BDDD74203471020008463A /* Bridge.h */,
 				B667E2692024359B00836917 /* AppDelegate.swift */,
 				B667E2732024359B00836917 /* Assets.xcassets */,
 				B667E2752024359B00836917 /* LaunchScreen.storyboard */,
@@ -195,6 +373,115 @@
 			path = "Visual HTMLUITests";
 			sourceTree = "<group>";
 		};
+		B68F9619205E2BF800197CE9 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				B68F9620205E2C7E00197CE9 /* DotSpinningLikeSkype.swift */,
+				B68F9622205E2C7F00197CE9 /* DotTrianglePath.swift */,
+				B68F961E205E2C7E00197CE9 /* FunnyDotsA.swift */,
+				B68F961D205E2C7E00197CE9 /* LineScale.swift */,
+				B68F961F205E2C7E00197CE9 /* RotatingCircle.swift */,
+				B68F9621205E2C7E00197CE9 /* SpininngDot.swift */,
+			);
+			path = animation;
+			sourceTree = "<group>";
+		};
+		B6B0A745204D1FB900CB26B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6B0A74A204D1FB900CB26B9 /* Rebekka.framework */,
+				B6B0A74C204D1FB900CB26B9 /* RebekkaTouch.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6B0A75A204D201100CB26B9 /* Rebekka */ = {
+			isa = PBXGroup;
+			children = (
+				B6B0A75B204D201100CB26B9 /* DirectoryCreationOperation.swift */,
+				B6B0A75C204D201100CB26B9 /* FileDownloadOperation.swift */,
+				B6B0A75D204D201100CB26B9 /* FileUploadOperation.swift */,
+				B6B0A75E204D201100CB26B9 /* Info.plist */,
+				B6B0A75F204D201100CB26B9 /* Operation.swift */,
+				B6B0A760204D201100CB26B9 /* ReadStreamOperation.swift */,
+				B6B0A761204D201100CB26B9 /* ResourceListOperation.swift */,
+				B6B0A762204D201100CB26B9 /* Session.swift */,
+				B6B0A763204D201100CB26B9 /* StreamOperation.swift */,
+				B6B0A764204D201100CB26B9 /* WriteStreamOperation.swift */,
+			);
+			path = Rebekka;
+			sourceTree = "<group>";
+		};
+		B6BDDD38203470C70008463A /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDDD39203470C70008463A /* Info.plist */,
+				B6BDDD3A203470C70008463A /* minizip */,
+				B6BDDD5E203470C70008463A /* SSZipArchive.h */,
+				B6BDDD5F203470C70008463A /* SSZipArchive.m */,
+				B6BDDD60203470C70008463A /* SSZipCommon.h */,
+				B6BDDD61203470C70008463A /* ZipArchive.h */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		B6BDDD3A203470C70008463A /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDDD3B203470C70008463A /* aes */,
+				B6BDDD50203470C70008463A /* crypt.c */,
+				B6BDDD51203470C70008463A /* crypt.h */,
+				B6BDDD52203470C70008463A /* ioapi.c */,
+				B6BDDD53203470C70008463A /* ioapi.h */,
+				B6BDDD54203470C70008463A /* ioapi_buf.c */,
+				B6BDDD55203470C70008463A /* ioapi_buf.h */,
+				B6BDDD56203470C70008463A /* ioapi_mem.c */,
+				B6BDDD57203470C70008463A /* ioapi_mem.h */,
+				B6BDDD58203470C70008463A /* minishared.c */,
+				B6BDDD59203470C70008463A /* minishared.h */,
+				B6BDDD5A203470C70008463A /* unzip.c */,
+				B6BDDD5B203470C70008463A /* unzip.h */,
+				B6BDDD5C203470C70008463A /* zip.c */,
+				B6BDDD5D203470C70008463A /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		B6BDDD3B203470C70008463A /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDDD3C203470C70008463A /* aes.h */,
+				B6BDDD3D203470C70008463A /* aes_ni.c */,
+				B6BDDD3E203470C70008463A /* aes_ni.h */,
+				B6BDDD3F203470C70008463A /* aescrypt.c */,
+				B6BDDD40203470C70008463A /* aeskey.c */,
+				B6BDDD41203470C70008463A /* aesopt.h */,
+				B6BDDD42203470C70008463A /* aestab.c */,
+				B6BDDD43203470C70008463A /* aestab.h */,
+				B6BDDD44203470C70008463A /* brg_endian.h */,
+				B6BDDD45203470C70008463A /* brg_types.h */,
+				B6BDDD46203470C70008463A /* fileenc.c */,
+				B6BDDD47203470C70008463A /* fileenc.h */,
+				B6BDDD48203470C70008463A /* hmac.c */,
+				B6BDDD49203470C70008463A /* hmac.h */,
+				B6BDDD4A203470C70008463A /* prng.c */,
+				B6BDDD4B203470C70008463A /* prng.h */,
+				B6BDDD4C203470C70008463A /* pwd2key.c */,
+				B6BDDD4D203470C70008463A /* pwd2key.h */,
+				B6BDDD4E203470C70008463A /* sha1.c */,
+				B6BDDD4F203470C70008463A /* sha1.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		B6BDDD75203472130008463A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDDD76203472140008463A /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,10 +492,12 @@
 				B667E2622024359B00836917 /* Sources */,
 				B667E2632024359B00836917 /* Frameworks */,
 				B667E2642024359B00836917 /* Resources */,
+				B6BDDD962034941D0008463A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B6B0A770204D220900CB26B9 /* PBXTargetDependency */,
 			);
 			name = "Visual HTML";
 			productName = "Visual HTML";
@@ -288,6 +577,12 @@
 			mainGroup = B667E25D2024359B00836917;
 			productRefGroup = B667E2672024359B00836917 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B6B0A745204D1FB900CB26B9 /* Products */;
+					ProjectRef = B6B0A744204D1FB900CB26B9 /* Rebekka.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B667E2652024359B00836917 /* Visual HTML */,
@@ -297,12 +592,31 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		B6B0A74A204D1FB900CB26B9 /* Rebekka.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rebekka.framework;
+			remoteRef = B6B0A749204D1FB900CB26B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B6B0A74C204D1FB900CB26B9 /* RebekkaTouch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RebekkaTouch.framework;
+			remoteRef = B6B0A74B204D1FB900CB26B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		B667E2642024359B00836917 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BDDD62203470C80008463A /* Info.plist in Resources */,
 				B667E29D202440DB00836917 /* Main.storyboard in Resources */,
+				B6B0A768204D201100CB26B9 /* Info.plist in Resources */,
 				B667E2772024359B00836917 /* LaunchScreen.storyboard in Resources */,
 				B667E2742024359B00836917 /* Assets.xcassets in Resources */,
 			);
@@ -329,26 +643,72 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BDDD6F203470C80008463A /* ioapi_mem.c in Sources */,
+				B6BDDD69203470C80008463A /* prng.c in Sources */,
 				B63486BC20296E8E0021D1E0 /* BlockView.swift in Sources */,
 				B6244560202564A600E82D35 /* StackFileViewer.swift in Sources */,
+				B68F9625205E2C7F00197CE9 /* RotatingCircle.swift in Sources */,
 				B667E26C2024359B00836917 /* ViewController.swift in Sources */,
+				B6BDDD6B203470C80008463A /* sha1.c in Sources */,
+				B68F967A205E2EAF00197CE9 /* TimingFunction.swift in Sources */,
+				B6BDDD70203470C80008463A /* minishared.c in Sources */,
+				B6B0A76D204D201100CB26B9 /* StreamOperation.swift in Sources */,
+				B6B0A766204D201100CB26B9 /* FileDownloadOperation.swift in Sources */,
+				B6B0A767204D201100CB26B9 /* FileUploadOperation.swift in Sources */,
 				B667E29B2024383D00836917 /* WebView.swift in Sources */,
+				B6B0A76B204D201100CB26B9 /* ResourceListOperation.swift in Sources */,
+				B6BDDD66203470C80008463A /* aestab.c in Sources */,
+				B6BDDD6A203470C80008463A /* pwd2key.c in Sources */,
 				B63486C0202A050B0021D1E0 /* PropertiesController.swift in Sources */,
+				B6BDDD6C203470C80008463A /* crypt.c in Sources */,
+				B6B0A769204D201100CB26B9 /* Operation.swift in Sources */,
+				B6BDDD71203470C80008463A /* unzip.c in Sources */,
+				B68F962A205E2CB000197CE9 /* RPLoadingAnimationDelegate.swift in Sources */,
+				B63486C4202AD2590021D1E0 /* HtmlParser.swift in Sources */,
+				B6BDDD68203470C80008463A /* hmac.c in Sources */,
+				B64A5D24205A463300AEA88D /* AlertView.swift in Sources */,
+				B6A9387F20510EE200C491D9 /* AddBlockView.swift in Sources */,
 				B60566BF202465EE009C8485 /* ProjectCellView.swift in Sources */,
 				B63486BA202850A80021D1E0 /* WordsView.swift in Sources */,
 				B667E2722024359B00836917 /* Visual_HTML.xcdatamodeld in Sources */,
+				B68F9628205E2C7F00197CE9 /* DotTrianglePath.swift in Sources */,
 				B667E26A2024359B00836917 /* AppDelegate.swift in Sources */,
+				B68F9626205E2C7F00197CE9 /* DotSpinningLikeSkype.swift in Sources */,
+				B68F9624205E2C7F00197CE9 /* FunnyDotsA.swift in Sources */,
 				B624455E2025646000E82D35 /* FileView.swift in Sources */,
+				B68F9623205E2C7F00197CE9 /* LineScale.swift in Sources */,
+				B6BDDD67203470C80008463A /* fileenc.c in Sources */,
+				B6BDDD65203470C80008463A /* aeskey.c in Sources */,
+				B6BDDD792034753C0008463A /* FTPManager.swift in Sources */,
+				B6BDDDED203579290008463A /* FTPViewController.swift in Sources */,
 				B667E29F2024426A00836917 /* Editor.swift in Sources */,
+				B6B0A765204D201100CB26B9 /* DirectoryCreationOperation.swift in Sources */,
+				B6B0A76C204D201100CB26B9 /* Session.swift in Sources */,
 				B60566BB20245414009C8485 /* Constant.swift in Sources */,
 				B63486B820284F360021D1E0 /* Reminder.swift in Sources */,
+				B6B0A76A204D201100CB26B9 /* ReadStreamOperation.swift in Sources */,
+				B6BDDDF220368E920008463A /* FTPConfiguration.swift in Sources */,
+				B6B0A76E204D201100CB26B9 /* WriteStreamOperation.swift in Sources */,
 				B60566C32024829E009C8485 /* ProjectCreator.swift in Sources */,
 				B60566C52024AD12009C8485 /* Global.swift in Sources */,
+				B6BDDDEF203597860008463A /* FileViewWithFTP.swift in Sources */,
+				B6BDDD63203470C80008463A /* aes_ni.c in Sources */,
+				B61F027F2030B16300474717 /* TextBlock.swift in Sources */,
+				B68F961C205E2C2600197CE9 /* RPLoadingAnimationView.swift in Sources */,
+				B6BDDDF620403CED0008463A /* DocumentShareController.swift in Sources */,
+				B6BDDD64203470C80008463A /* aescrypt.c in Sources */,
+				B68F9627205E2C7F00197CE9 /* SpininngDot.swift in Sources */,
+				B61F02812031B5F300474717 /* BlockViewWithNoEndTag.swift in Sources */,
 				B63486C2202A0F060021D1E0 /* PropertiesView.swift in Sources */,
 				B6244562202577FB00E82D35 /* Node.swift in Sources */,
+				B6BDDD6E203470C80008463A /* ioapi_buf.c in Sources */,
 				B63486BE20298F210021D1E0 /* VisualController.swift in Sources */,
 				B62445642025F17C00E82D35 /* FileCreator.swift in Sources */,
+				B6BDDD73203470C80008463A /* SSZipArchive.m in Sources */,
+				B6BDDD72203470C80008463A /* zip.c in Sources */,
+				B6BDDD6D203470C80008463A /* ioapi.c in Sources */,
 				B60566BD202464C0009C8485 /* ProjectsViewController.swift in Sources */,
+				B6A9387C204FCA0A00C491D9 /* JSFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +740,11 @@
 			isa = PBXTargetDependency;
 			target = B667E2652024359B00836917 /* Visual HTML */;
 			targetProxy = B667E2892024359B00836917 /* PBXContainerItemProxy */;
+		};
+		B6B0A770204D220900CB26B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RebekkaTouch;
+			targetProxy = B6B0A76F204D220900CB26B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -505,14 +870,19 @@
 		B667E2922024359B00836917 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KSH8TJ2RK;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				INFOPLIST_FILE = "Visual HTML/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "WeiQiang.Visual-HTML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Visual HTML/Bridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,14 +891,19 @@
 		B667E2932024359B00836917 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KSH8TJ2RK;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				INFOPLIST_FILE = "Visual HTML/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "WeiQiang.Visual-HTML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Visual HTML/Bridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

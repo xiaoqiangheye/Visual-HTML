@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 
 class BlockView:UIView,UITextFieldDelegate{
+    var parentController:VisualController!
     var childs:[BlockView] = []
     var parent:BlockView!
     var wordTag:String = ""
-    var properties = Dictionary<String,String>()
+    var properties = Dictionary<String,Any>()
     var cumulatedHeight:Int = 0
     var cumulatedX:Int = 20
     var cumulatedY:Int = 20
@@ -27,11 +28,13 @@ class BlockView:UIView,UITextFieldDelegate{
     
     init(frame: CGRect,wordTag:String) {
         super.init(frame: frame)
+        self.wordTag = wordTag
         textField = UITextField(frame: CGRect(x:20,y:0,width:self.frame.width - 40,height:20))
         textField.placeholder = "Tag"
         textField.text = wordTag
         textField.isHidden = true
         textField.delegate = self
+        
         
         
         label = UILabel(frame: CGRect(x:20,y:0,width:self.frame.width - 20,height:20))
@@ -81,6 +84,7 @@ class BlockView:UIView,UITextFieldDelegate{
     
     @objc func revealTextField(){
         textField.isHidden = false
+        self.parentController.loadProperties(block:self)
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -100,9 +104,10 @@ class BlockView:UIView,UITextFieldDelegate{
    
     
     @objc func addBlock(){
-        let blockview = BlockView(frame: CGRect(x:cumulatedX,y:cumulatedY,width:200,height:200), wordTag: "")
+        let blockview = BlockView(frame: CGRect(x:20,y:cumulatedY,width:200,height:200), wordTag: "")
         blockview.parent = self
-        //cumulatedX += 20
+        blockview.parentController = self.parentController
+        cumulatedX += 20
         cumulatedY += 50
         blockMid.frame.size.height += 50
         blockBelow.center.y += 50
@@ -125,6 +130,71 @@ class BlockView:UIView,UITextFieldDelegate{
         }
                 self.addSubview(blockview)
         addChild(child: blockview)
+    }
+    
+    func addBlockWithName(name:String){
+        let blockview = BlockView(frame: CGRect(x:cumulatedX,y:cumulatedY,width:200,height:200), wordTag: name)
+        blockview.parent = self
+        blockview.parentController = self.parentController
+        //cumulatedX += 20
+        cumulatedY += 50
+        blockMid.frame.size.height += 50
+        blockBelow.center.y += 50
+        self.frame.size.width += 20
+        self.frame.size.height += 50
+        var locationView:BlockView = self
+        while (locationView.hasParent()){
+            locationView.parent.blockMid.frame.size.height += 50
+            locationView.parent.blockBelow.center.y += 50
+            locationView.parent.cumulatedY += 50
+            locationView.parent.frame.size.height += 50
+            locationView.parent.frame.size.width += 20
+            let index:Int =  locationView.parent.childs.index(of: locationView)!
+            if index >= 0 && index < locationView.parent.childs.endIndex-1{
+                for i in index+1...locationView.parent.childs.endIndex-1{
+                    locationView.parent.childs[i].frame.origin.y += 50
+                }
+            }
+            locationView = locationView.parent
+        }
+        self.addSubview(blockview)
+        addChild(child: blockview)
+    }
+    
+    func addBlockwithBlock(block:BlockView){
+        block.parent = self
+        block.parentController = self.parentController
+        block.frame.origin.x = 20
+        block.frame.origin.y = CGFloat(cumulatedY)
+       // block.frame = CGRect(x:20,y:cumulatedY,width:200,height:200)
+        if cumulatedX < block.cumulatedX + 20{
+        cumulatedX = block.cumulatedX + 20
+        self.frame.size.width = CGFloat(block.cumulatedX) + 200
+        }
+        cumulatedY += block.cumulatedY + 30
+        blockMid.frame.size.height += CGFloat(block.cumulatedY + 30)
+        blockBelow.center.y += CGFloat(block.cumulatedY+30)
+       
+        self.frame.size.height += CGFloat(block.cumulatedY + 30)
+        var locationView:BlockView = self
+        while (locationView.hasParent()){
+            locationView.parent.blockMid.frame.size.height += CGFloat(locationView.cumulatedY)
+            locationView.parent.blockBelow.center.y += CGFloat(locationView.cumulatedY)
+            locationView.parent.cumulatedY += locationView.cumulatedY+30
+            locationView.parent.frame.size.height += CGFloat(locationView.cumulatedY + 30)
+            locationView.parent.frame.size.width += 20
+            let index:Int =  locationView.parent.childs.index(of: locationView)!
+            if index >= 0 && index < locationView.parent.childs.endIndex-1{
+                for i in index+1...locationView.parent.childs.endIndex-1{
+                    locationView.parent.childs[i].frame.origin.y += CGFloat(cumulatedY)
+                   
+                }
+            }
+            locationView = locationView.parent
+        }
+        
+        self.addSubview(block)
+        addChild(child: block)
     }
     
     @objc func removefromParent(){
@@ -167,7 +237,7 @@ class BlockView:UIView,UITextFieldDelegate{
         var returnChilds:[BlockView] = []
         if childs.count > 0{
             for i in childs{
-                if i.properties["class"] == classname{
+                if i.properties["class"] as! String == classname{
                     returnChilds.append(i)
                 }
             }
@@ -195,7 +265,7 @@ class BlockView:UIView,UITextFieldDelegate{
         var returnChilds:[BlockView] = []
         if childs.count > 0{
             for i in childs{
-                if i.properties["id"] == id{
+                if i.properties["id"] as! String == id{
                     returnChilds.append(i)
                 }
             }

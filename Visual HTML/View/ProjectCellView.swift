@@ -21,16 +21,17 @@ class ProjectCellView:UIView{
         pic.center.x = 50
         pic.center.y = 50
         pic.addTarget(parentController, action: #selector(parentController.presentCoding), for: UIControlEvents.touchDown)
-        ProjectName = name
-        ProjectUrl = Constant.MY_DIRECTORY + name + "/"
+        
+        print(ProjectName)
+        print(ProjectUrl)
         self.addSubview(pic)
         let lable = UILabel()
         lable.text = name
-        
         lable.font = UIFont.systemFont(ofSize: 15)
         lable.frame = CGRect(x: 50, y: 125, width: 100, height: 50)
         lable.center = CGPoint(x:50,y:125)
         lable.textColor = UIColor.black
+        lable.textAlignment = .center
         self.addSubview(lable)
     }
     

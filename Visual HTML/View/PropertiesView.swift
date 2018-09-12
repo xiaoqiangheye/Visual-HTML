@@ -9,29 +9,31 @@
 import Foundation
 import UIKit
 
-class PropertiesView:UIView{
+class PropertiesView:UIView,UITextViewDelegate{
     var key:String = ""
-    var value:String = ""
+    var value:Any!
     override init(frame: CGRect) {
         super.init(frame: frame)
         
     }
     
-    init(frame: CGRect,key:String,value:String){
+    init(frame: CGRect,key:String,value:Any){
         super.init(frame: frame)
         self.key = key
         self.value = value
         let keyTextView = UITextView()
         keyTextView.frame.size.width = self.frame.width/3
         keyTextView.frame.size.height = 20
-        keyTextView.frame.origin.x = 20
+        keyTextView.center.x = self.frame.width/4
         keyTextView.frame.origin.y = 0
+        keyTextView.text = key
         
         let valueTextView = UITextView()
         valueTextView.frame.size.width = self.frame.width/3
         valueTextView.frame.size.height = 20
-        valueTextView.frame.origin.x = self.frame.width/3*2
+        valueTextView.center.x = self.frame.width/4*3
         valueTextView.frame.origin.y = 0
+        valueTextView.text = value as! String
         self.addSubview(keyTextView)
         self.addSubview(valueTextView)
     }
